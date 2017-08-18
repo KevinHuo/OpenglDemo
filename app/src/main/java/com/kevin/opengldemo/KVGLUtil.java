@@ -1,5 +1,8 @@
 package com.kevin.opengldemo;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.opengl.GLES20;
 
 import java.nio.ByteBuffer;
@@ -29,6 +32,14 @@ public class KVGLUtil {
         GLES20.glShaderSource(shader, shaderCode);
         GLES20.glCompileShader(shader);
         return shader;
+    }
+
+    public static Bitmap createBitmap(Context context, int resourceID){
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inScaled = false;
+
+        final Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(),resourceID,options);
+        return bitmap;
     }
 }
 

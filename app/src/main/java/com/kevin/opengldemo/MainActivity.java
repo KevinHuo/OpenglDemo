@@ -10,6 +10,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         KVGLSurfaceView kVGLSurfaceView = new KVGLSurfaceView(this);
         setContentView(kVGLSurfaceView);
-
     }
 }

@@ -14,8 +14,7 @@ public class KVGLSurfaceView extends GLSurfaceView{
         super(context);
         setEGLContextClientVersion(2);
 
-        mRender = new KVGLRenderer();
+        mRender = new KVGLRenderer(context);
         setRenderer(mRender);
-
     }
 }
